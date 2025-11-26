@@ -14,6 +14,11 @@ CREATE TABLE pedido (
     FOREIGN KEY (CodigoCliente) REFERENCES cliente(Codigo)
 );
 
+CREATE TABLE categoria (
+    Codigo INT PRIMARY KEY,
+    Nome VARCHAR(255)
+);
+
 CREATE TABLE produto (
     Codigo INT PRIMARY KEY,
     Nome VARCHAR(255),
@@ -44,3 +49,4 @@ WHERE NumeroPedido = 102 AND CodigoProduto = 10;
 
 DELETE FROM cliente
 WHERE Codigo = 3;
+
